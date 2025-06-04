@@ -50,4 +50,39 @@ const myFunction=function(){
     console.log("My name Akshay Kumar");
     
 }
-myFunction(); // calling function
+//myFunction(); // calling function
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                                        Memory
+   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+// Stack(Primitive datatypes),  Heap(Non-Primitive datatypes/Reference datatypes)
+
+let name="Akshay kumar";
+let anotherName=name; //anotherName gets a copy of name's value
+
+anotherName="Alia";
+
+console.log(name);// Akshay kumar
+console.log(anotherName);// Alia
+
+// Primitive types (like number, string, boolean, null, undefined, symbol, and bigint)
+//are stored in stack memory and are copied by value.
+
+//++++++++++++++ Heap Memory +++++++++++++++++
+
+let userOne={
+    email:"akshay@gmail.com",
+    upi:"ak@sbi",
+}
+
+let userTwo=userOne;
+
+userTwo.email="alia@google.com";
+console.log(userOne);//{ email: 'alia@google.com', upi: 'ak@sbi' }
+
+console.log(userTwo);//{ email: 'alia@google.com', upi: 'ak@sbi' }
+
+//Reference types (like objects, arrays, functions)
+//are stored in heap memory, and variables hold references (pointers) to them.
